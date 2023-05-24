@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarthi's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background-color: rgb(18, 18, 62);
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 17px;
+        }
+
+        main {
+            padding: 40px 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: justify;
+        }
+
+        .para {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInRight 1s ease-in-out forwards;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInLeft 1s ease-in-out forwards;
+        }
+
+        .image img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeInLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: rgb(18, 18, 62);
+    }
+
+    .footer {
+        display: flex;
+        padding: 23px 132px;
+        justify-content: space-evenly;
+    }
+
+    .footer ul {
+        list-style: none;
+    }
+
+    .footer ul li a {
+        text-decoration: none;
+    }
+
+    .footer>div {
+        width: 223px;
+    }
+
+    footer .footer-rights {
+        text-align: center;
+        color: gray;
+        padding: 12px 0;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Aarthi's Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <div class="image">
+                <img src="aarthi.jpg" alt="Aarthi's Image">
+            </div>
+            <div class="content">
+                <div class="para">
+                    Hello, I'm Ambati Aarthi, a passionate student currently pursuing a Bachelor's degree in Artificial
+                    Intelligence and Machine Learning at GNITS College in Hyderabad. I have a strong interest in both
+                    website development and machine learning.
+                </div>
+
+                <div class="para">
+                    During my academic journey, I have gained valuable knowledge and experience in various areas. I
+                    specialize
+                    in front-end web development, with expertise in HTML, CSS, and JavaScript. I love creating visually
+                    appealing and user-friendly websites that combine functionality with great design.
+                </div>
+
+                <div class="para">
+                    In addition to web development, I have a solid foundation in programming languages like Java and
+                    Python.
+                    These languages have allowed me to explore the world of data science and machine learning. I am
+                    proficient
+                    in tools like Weka, Tableau, and SQL, which enable me to extract insights from data and create
+                    meaningful
+                    visualizations.
+                </div>
+
+                <div class="para">
+                    I find the process of developing websites and exploring the endless possibilities of machine
+                    learning truly
+                    fascinating. It excites me to see how these two domains can be integrated to create innovative
+                    solutions.
+                    I am always eager to learn new technologies and stay updated with the latest trends in both fields.
+                </div>
+
+                <div class="para">
+                    Throughout my academic journey, I have worked on various projects that have allowed me to apply my
+                    skills.
+                    These projects have provided me with hands-on experience in developing responsive websites and
+                    implementing
+                    machine learning algorithms. I have learned to tackle challenges, collaborate with teams, and
+                    deliver
+                    successful outcomes.
+                </div>
+
+                <div class="para">
+                    My goal is to leverage my skills in web development and machine learning to create impactful and
+                    innovative
+                    solutions. I am excited about the potential of these fields and how they can shape the future. I am
+                    always
+                    open to new opportunities and collaborations that allow me to expand my knowledge and contribute to
+                    meaningful projects.
+                </div>
+
+                <div class="para">
+                    Thank you for visiting my portfolio website. I invite you to explore my projects and get in touch
+                    with me
+                    to discuss potential collaborations or opportunities. Let's connect and explore the fascinating
+                    world of
+                    web development and machine learning together!
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Aarthi's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; aarthisportfolio.com | All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>

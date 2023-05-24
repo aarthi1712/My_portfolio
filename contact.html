@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarthi-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: rgb(153, 153, 226);
+        font-size: 1.01rem;
+    }
+    main {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .contact-info,
+    .contact-form,
+    .social-media {
+        margin-bottom: 40px;
+    }
+
+    .contact-info h2,
+    .contact-form h2,
+    .social-media h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .purple {
+        color: rgb(170, 107, 228);
+    }
+    .contact-info ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .contact-info ul li {
+        margin-bottom: 10px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        max-width: 300px; /* Adjust the size as per your preference */
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .contact-form button {
+        padding: 10px 20px;
+        background-color: rgb(18, 18, 62);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background-color: rgb(153, 153, 226);
+    }
+
+    .social-media ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-media ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .social-media ul li:last-child {
+        margin-right: 0;
+    }
+
+    .social-media ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    .social-media ul li a:hover {
+        color: rgb(153, 153, 226);
+    }
+
+    footer {
+        background-color: rgb(18, 18, 62);
+    }
+
+    .footer {
+        display: flex;
+        padding: 23px 132px;
+        justify-content: space-evenly;
+    }
+
+    .footer ul {
+        list-style: none;
+    }
+
+    .footer ul li a {
+        text-decoration: none;
+    }
+
+    .footer>div {
+        width: 223px;
+    }
+
+    footer .footer-rights {
+        text-align: center;
+        color: gray;
+        padding: 12px 0;
+    }
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Aarthi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me using the contact information or the form below:</p>
+
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><strong>Name : </strong><span class="purple">Ambati Aarthi</span></li>
+                    <li><strong>Email : </strong><span class="purple">ambati17122002@gmail.com</span></li>
+                    <li><strong>Phone : </strong><span class="purple">6301354950</span></li>
+                    <li><strong>Address : </strong><span class="purple">patancheruvu, Hyderabad</span></li>
+                </ul>
+            </div>
+
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+                <form action="https://formsubmit.co/aarthitemp1@gmail.com" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="social-media">
+                <h2>Connect with Me</h2>
+                <ul>
+                    <li><a href="https://www.linkedin.com/your-profile">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/your-profile">Twitter</a></li>
+                    <li><a href="https://github.com/aarthi1712">GitHub</a></li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Aarthi's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; aarthisportfolio.com | All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>

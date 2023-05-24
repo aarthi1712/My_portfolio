@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarthi-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 23px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: rgb(153, 153, 226);
+        font-size: 1.01rem;
+    }
+
+    main {
+        padding: 40px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .project {
+        margin: 40px;
+    }
+
+    .project-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .purple {
+        color: rgb(170, 107, 228);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .project-description {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .slideshow-container {
+        position: relative;
+        max-width: 100%;
+        height: 700px;
+        overflow: hidden;
+    }
+
+    .slideshow-container .image {
+        display: none;
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-radius: 10px;
+        padding: 1px;
+    }
+
+    .slideshow-container .image.active {
+        display: block;
+    }
+
+    .slideshow-container .image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slideshow-container .slideshow-nav {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slideshow-container .slideshow-nav button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 5px;
+        margin: 0 3px;
+    }
+
+    .slideshow-container .slideshow-nav button.active {
+        font-weight: bold;
+    }
+
+
+    .project-details {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .project-links {
+        margin-bottom: 10px;
+    }
+
+    .project-links a {
+        display: inline-block;
+        margin-right: 10px;
+        text-decoration: none;
+        color: white;
+    }
+
+    #dashboardSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.dashboard h2 {
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+.dashboard iframe {
+  width: 80%;
+  height: 1400px;
+  border: none;
+}
+
+#tableauDashboardContainer {
+  height: 1400px;
+}
+
+
+    footer {
+        background-color: rgb(18, 18, 62);
+    }
+
+    .footer {
+        display: flex;
+        padding: 23px 132px;
+        justify-content: space-evenly;
+    }
+
+    .footer ul {
+        list-style: none;
+    }
+
+    .footer ul li a {
+        text-decoration: none;
+    }
+
+    .footer>div {
+        width: 223px;
+    }
+
+    footer .footer-rights {
+        text-align: center;
+        color: gray;
+        padding: 12px 0;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Aarthi's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="project" id="project1">
+            <h1 class="project-title">Project 1-<span class="purple">ELITE DESIGNS</span></h1>
+            <p class="project-description">Elite Designs is an online platform that offers users the ability to create
+                and customize various design materials such as posters, resumes, templates, and more. The website aims
+                to provide a user-friendly and intuitive interface for designing and editing these materials, catering
+                to
+                a wide range of users with different design needs.It's key features include <li>Design Editor</li>
+                <li>Template Library</li>
+                <li>Easy-to-use interface</li>
+                <li>Free Download</li>
+                <li>Account Management</li>
+            </p>
+            <div class="slideshow-container">
+                <img src="pro-1a.png" alt="Image 1" class="image active">
+                <img src="pro-1b.png" alt="Image 2" class="image">
+                <img src="pro-1c.png" alt="Image 3" class="image">
+                <img src="pro-1d.png" alt="Image 2" class="image">
+                <img src="pro-1e.png" alt="Image 3" class="image">
+                <div class="slideshow-nav">
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                </div>
+            </div>
+            <p class="project-details">Technologies Used: HTML, CSS, JavaScript</p>
+            <div class="project-links">
+                <a href="https://github.com/aarthi1712/hobby_project">GitHub Repository</a>
+            </div>
+        </section>
+
+        <section class="project" id="project2">
+            <h1 class="project-title">Project 2-<span class="purple">THYROID PREDICTION USING MACHINE LEARNING</span>
+            </h1>
+            <p class="project-description">The Thyroid Prediction project focuses on predicting thyroid conditions using
+                machine
+                learning algorithms. In this project, various machine learning algorithms are trained on a dataset
+                containing features related to thyroid function tests, symptoms, and patient characteristics. These
+                algorithms analyze the data and learn patterns that can help predict the
+                likelihood of different thyroid conditions. The purpose of this project and website is to assist
+                individuals in assessing their thyroid health and provide early indications of potential thyroid
+                disorders. It aims to raise awareness, facilitate early detection, and encourage individuals to seek
+                appropriate medical attention if needed.</p>
+            <div class="slideshow-container">
+                <img src="pro-2a.png" alt="Image 1" class="image active">
+                <img src="pro-2b.png" alt="Image 2" class="image">
+                <img src="pro-2c.png" alt="Image 3" class="image">
+                <img src="pro-2d.png" alt="Image 2" class="image">
+                <img src="pro-2e.png" alt="Image 3" class="image">
+                <div class="slideshow-nav">
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                </div>
+            </div>
+            <p class="project-details">Technologies Used: sckit-learn, python, Flask, HTML, CSS, JS</p>
+        </section>
+
+        <section class="project" id="project3">
+            <h1 class="project-title">Mini-Projects-<span class="purple">Hobby Projects</span></h1>
+            <p class="project-description">I Worked on two mini-projects in edyst platform on website development. And
+                also Worked on two mini-projects in edyst platform in Generating Password using python,
+                TimeZone Converter using python</p>
+            <div class="slideshow-container">
+                <img src="pro-3a.png" alt="Image 1" class="image active">
+                <img src="pro-3b.png" alt="Image 2" class="image">
+                <img src="pro-3c.png" alt="Image 3" class="image">
+                <img src="pro-3d.png" alt="Image 2" class="image">
+                <img src="pro-3e.png" alt="Image 3" class="image">
+                <img src="pro-3f.png" alt="Image 2" class="image">
+                <div class="slideshow-nav">
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                </div>
+            </div>
+            <p class="project-details">Technologies Used:python, HTML, CSS, JS</p>
+        </section>
+
+        <section class="project" id="project4">
+            <h1 class="project-title">Project-<span class="purple">Machine Learning Projects</span></h1>
+            <p class="project-description">
+                <span class="purple">1. Diabetes Prediction</span>
+                <li>Problem Statement: Predict whether a person has diabetes or not based on various health-related
+                    features.</li>
+                <li>Dataset: Collect data on attributes such as glucose level, blood pressure, BMI, etc., along with the
+                    diabetes outcome.</li>
+                <li>Techniques: Classification algorithms like Logistic Regression, Decision Trees, Random Forest, or
+                    Support Vector Machines can be used.</li>
+                <li>Evaluation: Measure the accuracy, precision, recall, and F1 score of the models to assess their
+                    performance.</li>
+                <span class="purple">2. Thyroid Prediction</span>
+                <li>Problem Statement: Predict whether a patient has thyroid-related issues based on symptoms and
+                    medical test results.</li>
+                <li>Dataset: Gather data on symptoms, T3, T4, and TSH levels, and the presence of thyroid dysfunction.
+                </li>
+                <li>Techniques: Classification algorithms like Naive Bayes, K-Nearest Neighbors, or Artificial Neural
+                    Networks can be applied.</li>
+                <li>Evaluation: Use metrics such as accuracy, precision, recall, and confusion matrix to evaluate the
+                    models.</li>
+                <span class="purple">3. House Price Prediction</span>
+                <li>Problem Statement: Predict the selling price of a house based on various features such as location,
+                    size, number of rooms, etc.</li>
+                <li>Dataset: Collect data on house features like area, number of bedrooms, number of bathrooms, and the
+                    corresponding sale prices.</li>
+                <li>Techniques: Regression algorithms like Linear Regression, Decision Trees, Random Forest, or Gradient
+                    Boosting can be employed.</li>
+                <li>Evaluation: Assess the models' performance using metrics such as mean squared error (MSE), mean
+                    absolute error (MAE), and R-squared.</li>
+                <span class="purple">4. Advertising Dataset</span>
+                <li>Problem Statement: Analyze the relationship between advertising channels (TV, radio, newspaper) and
+                    their impact on product sales.</li>
+                <li>Dataset: Gather data on advertising budgets for different channels and corresponding sales figures.
+                </li>
+                <li>Techniques: Use regression analysis or other statistical methods to identify the influence of each
+                    advertising channel on sales.</li>
+                <li>Evaluation: Analyze the coefficients of the regression model and conduct hypothesis tests to
+                    determine the significance of each advertising channel.</li>
+                <span class="purple">5. Breast Cancer Prediction</span>
+                <li>Problem Statement: Develop a model to predict whether a breast tumor is malignant (cancerous) or
+                    benign (non-cancerous).</li>
+                <li>Dataset: Collect data on various features of the tumor, such as size, texture, perimeter, etc.,
+                    along with the diagnosis.</li>
+                <li>Techniques: Classification algorithms like Logistic Regression, Decision Trees, Random Forest, or
+                    Support Vector Machines can be applied.</li>
+                <li>Evaluation: Evaluate the models using metrics such as accuracy, precision, recall, F1 score, and
+                    area under the ROC curve.</li>
+
+            </p>
+        </section>
+        <section class="project" id="project5">
+            <h1 class="project-title">Tableau Projects-<span class="purple">Dashboards</span></h1>
+            <p class="project-description">
+                <span class="purple">1. COVID-19 Dashboard</span>
+                This Tableau dashboard presents an interactive visualization of the COVID-19 dataset. It includes
+                various metrics such as the number of confirmed cases, deaths,
+                and recoveries across different regions or countries. The dashboard allows users to explore the data by
+                filtering based on date, region, or specific metrics.
+                It may include charts, maps, and trends to provide a comprehensive view of the pandemic's impact.<br>
+                <span class="purple">2. Literacy Rate in India Dashboard</span>
+                The Tableau dashboard focuses on visualizing the literacy rate in India. It provides insights into the
+                literacy levels across different states or districts in India.
+                The dashboard may include charts, graphs, and maps to compare literacy rates, highlight regional
+                disparities, and analyze trends over time. Users can explore the data
+                to understand the literacy scenario and its correlation with other demographic factors.<br>
+                <span class="purple">3. India District Census-2011 Dashboard</span>
+                This Tableau dashboard leverages the India District Census-2011 dataset to present an overview of
+                various socio-economic indicators at the district level.
+                It provides visualizations that cover aspects such as population, literacy, gender ratio, employment,
+                education, and more. The dashboard allows users to
+                navigate through different districts, compare indicators, and gain insights into the demographic and
+                socio-economic characteristics of different regions in India.<br>
+                <span class="purple">4. Churn Dataset: Cluster and Segmentation</span>
+                The Tableau dashboard focuses on analyzing customer churn in a specific dataset. It employs clustering
+                and segmentation techniques to identify distinct customer
+                groups and their likelihood of churn. The dashboard may include visualizations such as scatter plots,
+                heatmaps, or dendrograms to showcase the clusters. Users can
+                interact with the dashboard to explore different segments, analyze their characteristics, and gain
+                insights into potential churn drivers<br>
+            </p>
+        </section>
+        <section id="dashboardSection">
+            <span class="purple">
+                <h2>Tableau Dashboards</h2>
+            </span>
+            <br>
+            <div id="dashboardContainer1" class="dashboard">
+                <script>
+                    function initTableau1() {
+                        var containerDiv = document.getElementById("dashboardContainer1");
+                        var url = "https://public.tableau.com/views/Aarthibook/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link";
+                        var options = {
+                            width: "1500px",
+                            height: "1400px",
+                            hideTabs: true,
+                            hideToolbar: true
+                        };
+                        var viz = new tableau.Viz(containerDiv, url, options);
+                    }
+                    initTableau1();
+                </script>
+            </div>
+
+            <div id="dashboardContainer2" class="dashboard">
+                <script>
+                    function initTableau2() {
+                        var containerDiv = document.getElementById("dashboardContainer2");
+                        var url = "https://public.tableau.com/views/Geospatial_16699573365380/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link";
+                        var options = {
+                            width: "1500px",
+                            height: "1400px",
+                            hideTabs: true,
+                            hideToolbar: true
+                        };
+                        var viz = new tableau.Viz(containerDiv, url, options);
+                    }
+                    initTableau2();
+                </script>
+            </div>
+
+            <div id="dashboardContainer3" class="dashboard">
+                <script>
+                    function initTableau3() {
+                        var containerDiv = document.getElementById("dashboardContainer3");
+                        var url = "https://public.tableau.com/views/census2_16723820592690/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link";
+                        var options = {
+                            width: "1500px",
+                            height: "1400px",
+                            hideTabs: true,
+                            hideToolbar: true
+                        };
+                        var viz = new tableau.Viz(containerDiv, url, options);
+                    }
+                    initTableau3();
+                </script>
+            </div>
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Aarthi's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; aarthisportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="sc.js"></script>
+
+</body>
+
+</html>
