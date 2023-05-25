@@ -353,6 +353,7 @@
             <span class="dot" onclick="currentSlide(13)"></span>
             <span class="dot" onclick="currentSlide(14)"></span>
         </div>
+        <button  style="background-color: #4b2c46; color: #fff; padding: 10px 20px; border: none; cursor: pointer; text-align: center; font-size: 16px;" onclick="goBack()">Go Back</button> 
     </main>
     <footer>
         <div class="footer">
@@ -390,6 +391,11 @@
         }
 
     </script>
+     <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
 </body>
 
 </html>
